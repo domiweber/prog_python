@@ -28,8 +28,10 @@ try:
         #Höchsten Umsatz Bestimmen
         if(int(spalten[2])> hoechsterUmsatz[2]):
             hoechsterUmsatz = [int(spalten[0]),spalten[1],int(spalten[2])]
+            if(niedrigsterUmsatz[2] == 0):
+                niedrigsterUmsatz = hoechsterUmsatz
         #Niedrigsten Umsatz bestimmen
-        if(int(spalten[2])< hoechsterUmsatz[2]):
+        if(int(spalten[2])< niedrigsterUmsatz[2]):
             niedrigsterUmsatz = [int(spalten[0]),spalten[1],int(spalten[2])]
         #Gesamtumsatz bestimmen
         gesamtUmsatz = gesamtUmsatz + int(spalten[2])
